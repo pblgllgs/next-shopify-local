@@ -496,6 +496,6 @@ const app = express();
 server.applyMiddleware({ app });
 
 
-app.listen(4000, () => {
-  console.log(`🚀 Server ready at http://localhost:4000${server.graphqlPath}`)
-})
+app.listen(process.env.PORT,() => {
+    console.log('Servidor corriendo en puerto ' + process.env.PORT)
+});
